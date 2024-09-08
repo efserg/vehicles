@@ -1,6 +1,6 @@
 package com.skillbox;
 
-public class Car extends Vehicle implements Breakable, Refuelable {
+public class Car extends Vehicle implements Breakable, Refuelled {
 
     private static final int SPEED = 5;
     private static final double BREAKDOWN_PROBABILITY = 0.75;

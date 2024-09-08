@@ -1,5 +1,5 @@
 package com.skillbox;
 
-public interface Refuelable {
+public interface Refuelled {
    void refuel();
 }
