@@ -13,6 +13,7 @@ public abstract class Vehicle {
 
     public void move() {
         this.x += speed;
+        System.out.println(this);
     }
 
     public int getX() {

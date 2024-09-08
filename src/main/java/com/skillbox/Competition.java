@@ -7,21 +7,14 @@ public class Competition {
         this.length = length;
     }
 
-    public void start(Vehicle vehicle1, Vehicle vehicle2) {
-        do {
-            vehicle1.move();
-            vehicle2.move();
-            System.out.println(vehicle1);
-            System.out.println(vehicle2);
-        } while (!isWin(vehicle1) && !isWin(vehicle2));
-        if (isWin(vehicle1)) {
-            System.out.println(vehicle1.getModel() + " победил!");
-        } else {
-            System.out.println(vehicle2.getModel() + " победил!");
+    public Vehicle race(Vehicle[] vehicles) {
+        while (true) {
+            for (Vehicle vehicle : vehicles) {
+                vehicle.move();
+                if (vehicle.getX() >= this.length) {
+                    return vehicle;
+                }
+            }
         }
-    }
-
-    private boolean isWin(Vehicle vehicle) {
-        return vehicle.getX() >= this.length;
     }
 }
